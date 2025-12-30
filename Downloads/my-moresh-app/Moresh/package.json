@@ -1,0 +1,35 @@
+{
+  "name": "Moresh",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Cross-platform chat app with PeerJS and Electron",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
+    "electron": "npm run build && electron .",
+    "package-win": "electron-packager . Moresh --overwrite --asar --platform=win32 --arch=x64 --out=release-builds",
+    "package-linux": "electron-packager . Moresh --overwrite --asar --platform=linux --arch=x64 --out=release-builds"
+  },
+  "dependencies": {
+    "peerjs": "^1.5.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "simple-peer": "^9.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "electron": "^37.2.4",
+    "electron-packager": "^17.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
